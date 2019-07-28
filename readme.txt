@@ -12,7 +12,7 @@ The problem produces two output files, here called ``kinshipfile'' and ``freqfil
 
 Software accompaniment to:
 
-"Two-way Mixed-Effects Methods for Joint Association Analyses Using Both Host and Pathogen Genomes. 
+"Two-way Mixed-Effects Methods for Joint Association Analyses Using Both Host and Pathogen Genomes." 
 M. Wang, F. Roux, C. Bartoli, C. H.-Chauveau, C. Meyer, H. Lee, D. Roby, M. S. McPeek, and J. Bergelson Proc. Natl. Acad. Sci. Vol. 115 (24), E5440-E5449, 2018."
 
 #########################################################################################
