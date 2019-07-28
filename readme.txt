@@ -33,18 +33,18 @@ gcc kinship_ATOMM.c -o kinship_ATOMM.o
 
 The program takes the following as input:
 
-1. genotypefile containing the genotype information for the studied individuals
+1. genotypefile containing the genotype information for the studied individuals.
 2. sizefile listing the number of individuals, the number of genetic variants, and the minor allele frequency threshold for the analysis.  
 
 The problem produces two output files, here called ``kinshipfile'' and ``freqfile".
 1. kinshipfile giving the genetic relatedness matrix for the studied individuals. 
-2. freqfile listing the allele frequency.  
+2. freqfile listing the allele frequencies for the studied variants.   
 
 The format of the input and output will be described in the next section. To run the executable problem, type the following command:
 
 ./kinship_ATOMM.o -g genotypefile.txt -s sizefile.txt -k kinshipfile.txt -f freqfile.txt
 
-The above command takes genotypefile.txt and sizefile.txt as inputs and outputs kinshipfile.txt and freqfile.txt. 
+The above command takes genotypefile.txt, sizefile.txt as inputs and generates kinshipfile.txt, freqfile.txt as outputs. 
 
 ###############################################################
 Input:
@@ -72,7 +72,7 @@ index BR01 BR02 BR03 BR04 BR06 BR18 BR19 BR20 BR21 BR14 BR16 BR13 BR15 BR07 BR23
 ...
 (n+1) genotype for individual n
 
-The genetic variant ID does not have to be consecutive. A blank space should be included between any two columns. 
+The genetic variant ID does not have to be consecutive. Please note that a blank space should be included between any two columns. 
 
 
 2) Format for size file
@@ -91,7 +91,7 @@ Example:
 Output:
 
 1) Format for kinship file
-This output contains the genetic relatedness matrix (GRM) for the studied individuals. The GRM is of size n-by-n, where n is the number of individuals in the input file. The entry in the matrix corresponds to genetic relatedness among the pair. 
+This output contains the genetic relatedness matrix (GRM) for the studied individuals. The GRM is of size n-by-n, where n is the number of individuals in the input file. Each entry in the matrix corresponds to the genetic relatedness among the pair of individuals. 
 
 Example:
  1.164182 -0.577799 ...-0.611849 -0.583317
@@ -101,7 +101,7 @@ Example:
 	
 
 2) Format for frequency file
-This output contains the allele frequency for the studied variants. Each row specifies the frequency for the alleles at a genetic variant. 
+This output contains the allele frequency for the studied variants. Each row gives the allele frequency at a genetic variant. 
 
 Example:
 index	 allel1_freq	 allel2_freq	 deletion_freq
@@ -117,7 +117,6 @@ index	 allel1_freq	 allel2_freq	 deletion_freq
 ###############################################################
 Example:
 The example folder contains example inputs and outputs. Input files are "genotype.txt", "size.txt". Output files are "freq.txt" and "kinship.txt"
-
 
 To run the program using the example input files, type:
 
