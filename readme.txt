@@ -3,12 +3,12 @@ Kinship_ATOMM is a C program that calculates genetic relatedness matrix among ha
 
 The program takes the following as input:
 
-1. genotypefile containing the genotype information for the studied individuals
+1. genotypefile containing the genotype information for the studied individuals.
 2. sizefile listing the number of individuals, the number of genetic variants, and the minor allele frequency threshold for the analysis.  
 
 The problem produces two output files, here called ``kinshipfile'' and ``freqfile".
 1. kinshipfile giving the genetic relatedness matrix for the studied individuals. 
-2. freqfile listing the allele frequency.  
+2. freqfile listing the allele frequencies for the studied variants. 
 
 Software accompaniment to:
 
@@ -18,16 +18,16 @@ M. Wang, F. Roux, C. Bartoli, C. H.-Chauveau, C. Meyer, H. Lee, D. Roby, M. S. M
 #########################################################################################
 Installation:
 
-(1) Download the kinship_ATOMM package. This package contains an example folder and the following source code
+(1) Download the kinship_ATOMM package. This package contains an example folder and the following source code:
 
-kinship_atomm.cnrutil.cnrutil.h
+kinship_ATOMM.cnrutil.cnrutil.h
 
-The package also contains a pre-compiled binary executable file for MAC.
+The package also contains a pre-compiled binary executable file, called kinship_ATOMM.o, for MAC.
 
 (2) If the pre-compiled binary file is not suitable for your use, please compile the program on your own machine. 
 A C compiler should be used to compile the program. When using the gcc compiler, type the following in the terminal: 
 
-gcc kinship_atomm.c -o kinship_atomm.o
+gcc kinship_ATOMM.c -o kinship_ATOMM.o
 
 (3) Run kinship_ATOMM
 
@@ -42,7 +42,7 @@ The problem produces two output files, here called ``kinshipfile'' and ``freqfil
 
 The format of the input and output will be described in the next section. To run the executable problem, type the following command:
 
-./kinship_atomm.o -g genotypefile.txt -s sizefile.txt -k kinshipfile.txt -f freqfile.txt
+./kinship_ATOMM.o -g genotypefile.txt -s sizefile.txt -k kinshipfile.txt -f freqfile.txt
 
 The above command takes genotypefile.txt and sizefile.txt as inputs and outputs kinshipfile.txt and freqfile.txt. 
 
@@ -121,6 +121,6 @@ The example folder contains example inputs and outputs. Input files are "genotyp
 
 To run the program using the example input files, type:
 
-./kinship_atomm.o -g example/input/genotype.txt -s example/input/size.txt -f freq.txt -k kinship.txt
+./kinship_ATOMM.o -g example/input/genotype.txt -s example/input/size.txt -f freq.txt -k kinship.txt
 
 Compare the results to the example output files in the ``example/output'' folder. 
