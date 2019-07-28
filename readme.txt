@@ -121,7 +121,6 @@ The example folder contains example inputs and outputs. Input files are "genotyp
 
 To run the program using the example input files, type:
 
-./kinship_atomm.o -g example/input/genotype.txt -s example/input/size.txt -f freq.txt -k .txt
+./kinship_atomm.o -g example/input/genotype.txt -s example/input/size.txt -f freq.txt -k kinship.txt
 
-
-compare the results to the example output file in the ``example/output'' folder. 
+Compare the results to the example output files in the ``example/output'' folder. 
